@@ -2,10 +2,10 @@
 # Codexify Tracker Configuration
 # Community feedback tracking system
 # ===========================================================================
-MongoURI: "YOUR_MONGODB_URI"
+MongoURI: "${MongoURI}"
 DebugMode: true
 
-OwnerID: ["YOUR_OWNER_ID"] # The Discord User ID's that will have full access, you can add multiple
+OwnerID: ["${OwnerID}"] # The Discord User ID's that will have full access, you can add multiple
 
 # ===========================================================================
 # DISCORD BOT
@@ -13,8 +13,8 @@ OwnerID: ["YOUR_OWNER_ID"] # The Discord User ID's that will have full access, y
 # ===========================================================================
 # The discord bot is mostly used for logs, automatically giving roles, etc.
 
-Token: "YOUR_DISCORD_BOT_TOKEN" # If you don't know how to get it, Look at our docs: https://docs.plexdevelopment.net {{TIME}}
-GuildID: "YOUR_GUILD_ID" # This is your discord server's ID, Right click on your server icon and copy ID
+Token: "${Token}" # If you don't know how to get it, Look at our docs: https://docs.plexdevelopment.net {{TIME}}
+GuildID: "${GuildID}" # This is your discord server's ID, Right click on your server icon and copy ID
 autoJoinUsers: true # Should users automatically get added to your Discord server when they login?
 # ===========================================================================
 # DISCORD OAUTH2
@@ -22,11 +22,11 @@ autoJoinUsers: true # Should users automatically get added to your Discord serve
 # ===========================================================================
 # Discord OAuth2 credentials, get these from the Discord Developer Portal: https://discord.com/developers/applications
 # Note: MAKE SURE TO REPLACE LOCALHOST:3000 WITH THE DOMAIN OR IP YOU ACCESS THE WEBSITE WITH!
-clientID: "YOUR_CLIENT_ID"
-clientSecret: "YOUR_CLIENT_SECRET"
-callbackURL: "http://localhost:3000/auth/discord/callback" # Create a Redirect URL in the Developer Portal and set it to this callback URL
+clientID: "${clientID}"
+clientSecret: "${clientSecret}"
+callbackURL: "${callbackURL}" # Create a Redirect URL in the Developer Portal and set it to this callback URL
 
-secretKey: "YOUR_SECRET_KEY" # This can be anything, We recommend using this https://www.dashlane.com/features/password-generator with at least 20 characters, ({{USERNAME}})
+secretKey: "${secretKey}" # This can be anything, We recommend using this https://www.dashlane.com/features/password-generator with at least 20 characters, ({{USERNAME}})
 
 Secure: false # Enable if you are using HTTPS
 trustProxy: false # Enable If your application is behind a reverse proxy (like Cloudflare, Nginx, etc.)
@@ -36,5 +36,5 @@ SessionExpires: "7d" # How long should a session be valid
 # WEBSERVER
 # You must not leave them as blank!
 # ===========================================================================
-baseURL: "http://localhost:3000" # The exact URL you use to access the website, No trailing slashes
-Port: 3000 # The port you want the webserver to be ran on
+baseURL: "${baseURL}" # The exact URL you use to access the website, No trailing slashes
+Port: "${Port}" # The port you want the webserver to be ran on
